@@ -1,0 +1,12 @@
+.ityped-cursor{
+    animation: blinkk 1s infinite;
+}
+@keyframes blinkk {
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}

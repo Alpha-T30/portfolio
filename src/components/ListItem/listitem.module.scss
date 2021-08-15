@@ -1,0 +1,19 @@
+@import "../../global.module.scss";
+
+li {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    margin-right: 50px;
+    cursor: pointer;
+    padding: 7px;
+
+    &.active {
+      background-color: $mainColor;
+      color: white;
+      border-radius: 10px;
+      padding: 5px;
+    }
+  }

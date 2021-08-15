@@ -1,0 +1,108 @@
+@import "../../global.module.scss";
+
+
+.intro {
+  background-color: white;
+  display: flex;
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left {
+    flex: 6;
+    .imagecontainer {
+      background-color: rgba(22, 204, 236, 0.466);
+      width: 700px;
+      height: 700px;
+      overflow: hidden;
+
+      display: flex;
+
+      justify-content: center;
+      border-radius: 50%;
+      float: right;
+      align-items: flex-end;
+      @include mobile {
+        align-items: flex-start;
+      }
+
+      img {
+        width: 100%;
+        height: 90%;
+        object-fit: contain;
+        position: relative;
+        bottom: 25px;
+
+        @include mobile {
+          height: 50%;
+        }
+      }
+    }
+  }
+  .right {
+    flex: 6;
+    position: relative;
+
+    .wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 60px;
+      @include mobile {
+        padding-left: 0;
+      }
+      h1 {
+        font-size: 65px;
+        margin: 10px 0;
+        @include mobile {
+          font-size: 45px;
+        }
+      }
+      
+      h2 {
+        font-size: 35px;
+        @include mobile {
+            font-size: 26px;
+          }
+      }
+      h3 {
+        font-size: 32px;
+        @include mobile {
+            font-size: 20px;
+          }
+        span {
+          color: crimson;
+          margin-left: 5px;
+        }
+        .ityped-cursor {
+          animation: blinkk 1s infinite;
+        }
+        @keyframes blinkk {
+          50% {
+            opacity: 1;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+    }
+    a {
+      position: absolute;
+      bottom: 10px;
+
+      left: 40%;
+      img {
+        width: 40px;
+        animation: arrowBlink 2s infinite;
+      }
+      @keyframes arrowBlink {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

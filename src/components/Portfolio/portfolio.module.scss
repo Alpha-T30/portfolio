@@ -1,0 +1,117 @@
+@import "../../global.module.scss";
+
+
+.portfolio {
+  background-color: #fff;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    margin-top: 10px;
+    font-size: 50px;
+    @include mobile {
+      font-size: 30px;
+      margin-top: 5px;
+    }
+
+  }
+  ul {
+    margin-bottom: 10px;
+    list-style: none;
+    margin-top: 10px;
+
+    display: flex;
+    @include mobile {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-evenly;
+      text-align: center;
+    }
+
+    li {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 500;
+      margin-right: 50px;
+      cursor: pointer;
+      padding: 7px;
+      @include mobile {
+        padding: 7px;
+        font-size: 13px;
+        margin: 10px;
+    
+      }
+
+      &.active {
+        background-color: $mainColor;
+        color: white;
+        border-radius: 10px;
+        padding: 5px;
+        @include mobile {
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+  .container {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 400px;
+    margin-top: 20px;
+    
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    @include mobile {
+       width: 100%;
+       
+      
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .item {
+      width: 220px;
+      height: 150px;
+      border-radius: 20px;
+      border: 1px solid lightgray;
+      margin: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+     
+      
+      h3 {
+        position: absolute;
+        font-size: 20px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+
+        object-fit: cover;
+      }
+      &:hover {
+        background-color: $mainColor;
+
+        img {
+          opacity: 0.3;
+          z-index: 0;
+        }
+      }
+    }
+  }
+}

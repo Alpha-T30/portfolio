@@ -1,0 +1,46 @@
+@import "../../global.module.scss";
+
+
+.item {
+    width: 220px;
+    height: 150px;
+    border-radius: 20px;
+    border: 1px solid lightgray;
+    margin: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    transition:all 0.5s ease ;
+    @include mobile {
+        width: 130px;
+        height: 100px;
+        
+      }
+    h3{
+        position: absolute; 
+        font-size: 20px;
+
+    }
+    img {
+      width: 100%; 
+      height: 100%;
+      z-index: 1;
+
+    
+
+      object-fit: cover;
+    }
+    &:hover{ 
+    background-color: $mainColor;
+      
+        img{
+           
+            opacity: 0.3;
+            z-index: 0;
+        }
+    }
+  }

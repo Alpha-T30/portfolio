@@ -1,7 +1,12 @@
+
 import React, { useRef } from "react";
 import Style from "./contact.module.scss";
 import { useState } from "react";
 import axios from "axios";
+
+
+// require('dotenv').config() ; 
+
 
 export default function Contact() {
   const [isSend, setSend] = useState(false);
@@ -16,7 +21,7 @@ export default function Contact() {
     console.log(emailRef.current.value);
 
     try {
-      await axios.post("", {
+      await axios.post(process.env.REACT_APP_API, {
         senderEmail: emailRef.current.value,
         receiverEmail:"mrhaquet20@gmail.com",
         text: messageRef.current.value,

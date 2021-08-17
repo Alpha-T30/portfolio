@@ -16,7 +16,7 @@ export default function Contact() {
     console.log(emailRef.current.value);
 
     try {
-      await axios.post("https://smpmailsender.herokuapp.com/api/mail/", {
+      await axios.post("", {
         senderEmail: emailRef.current.value,
         receiverEmail:"mrhaquet20@gmail.com",
         text: messageRef.current.value,

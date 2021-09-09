@@ -18,7 +18,7 @@ export default function Topbar({isactive, setActive}) {
             </div>
             <div className={Style.itemcontainer}>
               <Mail className={Style.icons}></Mail>
-              <span>enamul@alpha.com</span>
+              <span>mrhaquet20@.com</span>
             </div>
           </div>
         </div>
